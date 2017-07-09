@@ -4,6 +4,8 @@ import { withTheme } from 'styled-components';
 import styled from 'styled-components/native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
+import TopBar from '../components/TopBar';
+
 const MainContainer = styled.View`
     flex: 1;
     background-color: ${props => props.theme.background};
@@ -16,8 +18,13 @@ class Account extends React.Component {
     });
 
     render(){
+        let { theme } = this.props;
+
         return(
             <MainContainer>
+                <TopBar
+                    color={theme.topBar.background}
+                />
                 <Text>This is the Account screen</Text>
             </MainContainer>
         )

@@ -12,7 +12,7 @@ export default class App extends React.Component {
     }
 
     componentWillMount(){
-        setTheme('dark', () => {
+        setTheme('light', () => {
             let theme = getTheme((theme) => {
                 this.setState({ theme: theme });
             });
