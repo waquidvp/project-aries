@@ -1,6 +1,7 @@
 import { AsyncStorage } from 'react-native';
 
 let darkTheme = {
+    background: 'rgba(29,29,33, 0.73)',
     bottomNav: {
         background: '#1D1D21',
         activeIcon: 'rgb(255, 255, 255)',
@@ -10,11 +11,12 @@ let darkTheme = {
 };
 
 let lightTheme = {
+    background: '#FAFAFA',    
     bottomNav: {
-        background: '#1D1D21',
-        activeIcon: 'rgb(255, 255, 255)',
-        inactiveIcon: 'rgba(255, 255, 255, 0.7)',
-        rippleColor: 'rgb(255, 255, 255)'        
+        background: '#FFFFFF',
+        activeIcon: '#3899C3',
+        inactiveIcon: 'rgba(0, 0, 0, 0.54)',
+        rippleColor: 'rgb(0, 0, 0)'
     }
 };
 
