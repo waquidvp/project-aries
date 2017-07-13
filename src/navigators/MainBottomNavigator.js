@@ -12,7 +12,7 @@ import Account from '../screens/Account';
 const createRootNavigator = (theme) => {
     return TabNavigator({
         Feed: { screen: Feed },
-        Search: { screen: Search },        
+        Search: { screen: Search },
         Chats: { screen: Chats },
         Account: { screen: Account }
     }, {
@@ -47,7 +47,7 @@ const createRootNavigator = (theme) => {
             }
         }
     });
-}
+};
 
 class MainBottomNavigator extends React.Component {    
     render(){

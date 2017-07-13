@@ -1,10 +1,10 @@
 import React from 'react';
-import { Text } from 'react-native';
 import { withTheme } from 'styled-components';
 import styled from 'styled-components/native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import TopBar from '../components/TopBar';
+import PostCard from '../components/PostCard';
 
 const MainContainer = styled.View`
     flex: 1;
@@ -25,7 +25,7 @@ class Feed extends React.Component {
                 <TopBar
                     color={theme.topBar.background}
                 />
-                <Text>This is the Feed screen</Text>
+                <PostCard />
             </MainContainer>
         )
     }
