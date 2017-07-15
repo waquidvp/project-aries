@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import styled from 'styled-components/native';
 
@@ -10,8 +12,7 @@ const MainContainer = styled.View`
     elevation: 4;
 `;
 
-const InnerContainer = styled.View`
-    height: 56px;
+const InnerContainer = styled.View`    height: 56px;
     justify-content: center;
     padding: 0 8px;
 `;

@@ -1,3 +1,5 @@
+// @flow
+
 import {AsyncStorage} from 'react-native';
 
 let darkTheme = {
@@ -26,7 +28,7 @@ let lightTheme = {
     }
 };
 
-function getTheme(callback) {
+function getTheme(callback: Function) {
     try {
         AsyncStorage.getItem('currentTheme')
             .then((currentTheme) => {
@@ -55,7 +57,7 @@ function getTheme(callback) {
     }
 }
 
-function getThemeName(callback) {
+function getThemeName(callback: Function) {
     try {
         AsyncStorage.getItem('currentTheme')
             .then((currentTheme) => {
@@ -66,7 +68,7 @@ function getThemeName(callback) {
     }
 }
 
-function setTheme(themeName, callback) {
+function setTheme(themeName: string, callback: Function) {
     try {
         AsyncStorage.setItem('currentTheme', themeName)
             .then((newTheme) => {
