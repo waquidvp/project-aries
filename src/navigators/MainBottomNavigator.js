@@ -16,9 +16,9 @@ const createRootNavigator = (theme) => {
         Chats: { screen: Chats },
         Account: { screen: Account }
     }, {
-        tabBarComponent: NavigationComponent,
         tabBarPosition: 'bottom',
         swipeEnabled: false,
+        tabBarComponent: NavigationComponent,
         animationEnabled: false,
         tabBarOptions: {
             bottomNavigationOptions: {

@@ -17,10 +17,10 @@ const InnerContainer = styled.View`
 `;
 
 export default class TopBar extends React.Component {
-    render(){
-        let { color, iconColor } = this.props;
+    render() {
+        let {color, iconColor} = this.props;
 
-        return(
+        return (
             <MainContainer color={color}>
                 <InnerContainer>
                     <SearchBox iconColor={iconColor}/>

@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/native';
 import PropTypes from 'prop-types';
-import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import IconButton from './IconButton';
 
@@ -24,10 +23,10 @@ const SearchInput = styled.TextInput`
 `;
 
 export default class SearchBox extends React.Component {
-    render(){
-        let { iconColor } = this.props;
+    render() {
+        let {iconColor} = this.props;
 
-        return(
+        return (
             <MainContainer>
                 <IconButton
                     name='menu'
@@ -35,7 +34,7 @@ export default class SearchBox extends React.Component {
                     iconSize={24}
                     iconColor={iconColor}
                 />
-                <SearchInput 
+                <SearchInput
                     placeholder='Search'
                     underlineColorAndroid={'transparent'}
                 />
@@ -52,4 +51,4 @@ export default class SearchBox extends React.Component {
 
 SearchBox.PropTypes = {
     iconColor: PropTypes.string,
-}
+};

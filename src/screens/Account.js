@@ -1,6 +1,6 @@
 import React from 'react';
-import { Text } from 'react-native';
-import { withTheme } from 'styled-components';
+import {Text} from 'react-native';
+import {withTheme} from 'styled-components';
 import styled from 'styled-components/native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
@@ -12,15 +12,15 @@ const MainContainer = styled.View`
 `;
 
 class Account extends React.Component {
-    static navigationOptions = ({ screenProps }) => ({
+    static navigationOptions = ({screenProps}) => ({
         tabBarLabel: 'Account',
-        tabBarIcon: <Icon size={24} color={screenProps.theme.bottomNav.inactiveIcon} name="account-circle" />
+        tabBarIcon: <Icon size={24} color={screenProps.theme.bottomNav.inactiveIcon} name="account-circle"/>
     });
 
-    render(){
-        let { theme } = this.props;
+    render() {
+        let {theme} = this.props;
 
-        return(
+        return (
             <MainContainer>
                 <TopBar
                     color={theme.topBar.background}

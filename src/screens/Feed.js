@@ -1,5 +1,5 @@
 import React from 'react';
-import { withTheme } from 'styled-components';
+import {withTheme} from 'styled-components';
 import styled from 'styled-components/native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
@@ -12,15 +12,15 @@ const MainContainer = styled.View`
 `;
 
 class Feed extends React.Component {
-    static navigationOptions = ({ screenProps }) => ({
+    static navigationOptions = ({screenProps}) => ({
         tabBarLabel: 'Feed',
-        tabBarIcon: <Icon size={24} color={screenProps.theme.bottomNav.inactiveIcon} name="view-agenda" />
+        tabBarIcon: <Icon size={24} color={screenProps.theme.bottomNav.inactiveIcon} name="view-agenda"/>
     });
-    
-    render(){
-        let { theme } = this.props;
 
-        return(
+    render() {
+        let {theme} = this.props;
+
+        return (
             <MainContainer>
                 <TopBar
                     color={theme.topBar.background}

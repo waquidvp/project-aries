@@ -1,4 +1,4 @@
-import { AsyncStorage } from 'react-native';
+import {AsyncStorage} from 'react-native';
 
 let darkTheme = {
     background: 'rgba(29,29,33, 0.73)',
@@ -14,7 +14,7 @@ let darkTheme = {
 };
 
 let lightTheme = {
-    background: '#FAFAFA',  
+    background: '#FAFAFA',
     topBar: {
         background: '#68577A'
     },
@@ -26,18 +26,17 @@ let lightTheme = {
     }
 };
 
-
-function getTheme(callback){
+function getTheme(callback) {
     try {
         AsyncStorage.getItem('currentTheme')
             .then((currentTheme) => {
                 let theme;
-                if (currentTheme != null) {
+                if (currentTheme !== null) {
                     switch (currentTheme) {
                         case 'dark':
                             theme = darkTheme;
                             break;
-                        
+
                         case 'light':
                             theme = lightTheme;
                             break;
@@ -56,7 +55,7 @@ function getTheme(callback){
     }
 }
 
-function getThemeName(callback){
+function getThemeName(callback) {
     try {
         AsyncStorage.getItem('currentTheme')
             .then((currentTheme) => {
@@ -67,7 +66,7 @@ function getThemeName(callback){
     }
 }
 
-function setTheme(themeName, callback){
+function setTheme(themeName, callback) {
     try {
         AsyncStorage.setItem('currentTheme', themeName)
             .then((newTheme) => {
@@ -78,4 +77,4 @@ function setTheme(themeName, callback){
     }
 }
 
-export { getTheme, getThemeName, setTheme };
+export {getTheme, getThemeName, setTheme};

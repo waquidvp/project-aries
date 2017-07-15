@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableNativeFeedback } from 'react-native';
+import {TouchableNativeFeedback} from 'react-native';
 import styled from 'styled-components/native';
 import PropTypes from 'prop-types';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -17,10 +17,11 @@ const IconView = styled.View`
 
 export default class IconButton extends React.Component {
     render() {
-        var { name, size, iconSize, iconColor, rippleColor, onPress } = this.props;
-        return(
+        let {name, size, iconSize, iconColor, rippleColor, onPress} = this.props;
+        return (
             <MainContainer size={size}>
-                <TouchableNativeFeedback background={TouchableNativeFeedback.Ripple(rippleColor, true)} onPress={onPress}>
+                <TouchableNativeFeedback background={TouchableNativeFeedback.Ripple(rippleColor, true)}
+                                         onPress={onPress}>
                     <IconView size={size} pointerEvents='box-only'>
                         <Icon name={name} size={iconSize} color={iconColor ? iconColor : '#747474'}/>
                     </IconView>
@@ -37,4 +38,4 @@ IconButton.PropTypes = {
     iconColor: PropTypes.number,
     rippleColor: PropTypes.string,
     onPress: PropTypes.func
-}
+};
