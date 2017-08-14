@@ -12,7 +12,8 @@ let darkTheme = {
     activeIcon: 'rgb(255, 255, 255)',
     inactiveIcon: 'rgba(255, 255, 255, 0.7)',
     rippleColor: 'rgb(255, 255, 255)'
-  }
+  },
+  divider: 'rgba(0, 0, 0, 0.12)'
 };
 
 let lightTheme = {
@@ -25,10 +26,11 @@ let lightTheme = {
     activeIcon: '#3899C3',
     inactiveIcon: 'rgba(0, 0, 0, 0.54)',
     rippleColor: 'rgb(0, 0, 0)'
-  }
+  },
+  divider: 'rgba(0, 0, 0, 0.12)'  
 };
 
-function getTheme(callback: Function) {
+function getTheme(callback) {
   try {
     AsyncStorage.getItem('currentTheme')
       .then((currentTheme) => {
@@ -57,7 +59,7 @@ function getTheme(callback: Function) {
   }
 }
 
-function getThemeName(callback: Function) {
+function getThemeName(callback) {
   try {
     AsyncStorage.getItem('currentTheme')
       .then((currentTheme) => {
@@ -68,7 +70,7 @@ function getThemeName(callback: Function) {
   }
 }
 
-function setTheme(themeName: string, callback: Function) {
+function setTheme(themeName, callback) {
   try {
     AsyncStorage.setItem('currentTheme', themeName)
       .then((newTheme) => {

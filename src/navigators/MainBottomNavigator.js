@@ -54,7 +54,7 @@ const createRootNavigator = (theme) => {
 class MainBottomNavigator extends React.Component {
   render() {
     let { theme } = this.props;
-    const Navigator = createRootNavigator(theme);
+    let Navigator = createRootNavigator(theme);
 
     return (
       <Navigator screenProps={{ theme }} />
