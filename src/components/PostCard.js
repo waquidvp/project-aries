@@ -25,21 +25,21 @@ const PostFooter = styled.View`
 `;
 
 class PostCard extends React.Component {
-    render(){
-        return(
-            <MainContainer>
-                <PostContent>
+  render() {
+    return (
+      <MainContainer>
+        <PostContent>
 
-                </PostContent>
-                <PostDetail>
+        </PostContent>
+        <PostDetail>
 
-                </PostDetail>
-                <PostFooter>
+        </PostDetail>
+        <PostFooter>
 
-                </PostFooter>
-            </MainContainer>
-        )
-    }
+        </PostFooter>
+      </MainContainer>
+    )
+  }
 }
 
 export default withTheme(PostCard);

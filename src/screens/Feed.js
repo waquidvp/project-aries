@@ -1,7 +1,8 @@
 import React from 'react';
-import {withTheme} from 'styled-components';
+import { withTheme } from 'styled-components';
 import styled from 'styled-components/native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import PropsTypes from 'prop-types';
 
 import TopBar from '../components/TopBar';
 import PostCard from '../components/PostCard';
@@ -12,23 +13,27 @@ const MainContainer = styled.View`
 `;
 
 class Feed extends React.Component {
-    static navigationOptions = ({screenProps}) => ({
-        tabBarLabel: 'Feed',
-        tabBarIcon: <Icon size={24} color={screenProps.theme.bottomNav.inactiveIcon} name="view-agenda"/>
-    });
+  static propTypes = {
+    theme: PropsTypes.object.isRequired,
+  };
 
-    render() {
-        let {theme} = this.props;
+  static navigationOptions = ({ screenProps }) => ({
+    tabBarLabel: 'Feed',
+    tabBarIcon: <Icon size={24} color={screenProps.theme.bottomNav.inactiveIcon} name="view-agenda" />,
+  });
 
-        return (
-            <MainContainer>
-                <TopBar
-                    color={theme.topBar.background}
-                />
-                <PostCard />
-            </MainContainer>
-        )
-    }
+  render() {
+    const { theme } = this.props;
+
+    return (
+      <MainContainer>
+        <TopBar
+          color={theme.topBar.background}
+        />
+        <PostCard />
+      </MainContainer>
+    );
+  }
 }
 
 export default withTheme(Feed);
