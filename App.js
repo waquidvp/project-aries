@@ -7,22 +7,16 @@ import { getTheme, setTheme } from './src/utils/theme';
 import MainBottomNavigator from './src/navigators/MainBottomNavigator';
 
 export default class App extends React.Component {
-  state: {
-    theme: Object
-  };
-
   constructor() {
     super();
 
-    this.state = {
-      theme: {},
-    };
+    this.state = {};
   }
 
   componentWillMount() {
     setTheme('dark', () => {
       getTheme((theme) => {
-        this.setState({ theme });
+        this.setState({ theme: theme });
       });
     });
   }
