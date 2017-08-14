@@ -15,7 +15,11 @@ const MainContainer = styled.View`
 `;
 
 const ListSeperator = styled.View`
-  height: 4px;
+    height: 4px;
+`;
+
+const Header = styled.View`
+    height: 28px;
 `;
 
 class Feed extends React.Component {
@@ -57,7 +61,7 @@ class Feed extends React.Component {
 
         return (
             <MainContainer>
-                <TopBar color={theme.topBar.background} />
+                {/* <TopBar color={theme.topBar.background} /> */}
                 <FlatList
                     data={data}
                     onRefresh={this.refresh}
@@ -71,7 +75,7 @@ class Feed extends React.Component {
                                     { news: item }
                                 )} */
                         />}
-                    ListHeaderComponent={ListSeperator}
+                    ListHeaderComponent={Header}
                     ListFooterComponent={ListSeperator}
                 />
             </MainContainer>
