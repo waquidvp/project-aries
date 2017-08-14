@@ -53,3 +53,4 @@ fastlane/Preview.html
 fastlane/screenshots
 jsconfig.json
 .vscode/
+.tmp/
