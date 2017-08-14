@@ -1,33 +1,39 @@
-// @flow
+/* @flow*/
 
 import React from 'react';
-import {ThemeProvider} from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 
-import {getTheme, setTheme} from './src/utils/theme';
+import { getTheme, setTheme } from './src/utils/theme';
 import MainBottomNavigator from './src/navigators/MainBottomNavigator';
 
 export default class App extends React.Component {
-    constructor(props) {
-        super(props);
+  state: {
+    theme: Object
+  };
 
-        this.state = {}
-    }
+  constructor() {
+    super();
 
-    componentWillMount() {
-        setTheme('dark', () => {
-            getTheme((theme) => {
-                this.setState({theme: theme});
-            });
-        });
-    }
+    this.state = {
+      theme: {},
+    };
+  }
 
-    render() {
-        return (
-            this.state.theme ?
-                <ThemeProvider theme={this.state.theme}>
-                    <MainBottomNavigator />
-                </ThemeProvider>
-                : null
-        );
-    }
+  componentWillMount() {
+    setTheme('dark', () => {
+      getTheme((theme) => {
+        this.setState({ theme });
+      });
+    });
+  }
+
+  render() {
+    return (
+      this.state.theme ?
+        <ThemeProvider theme={this.state.theme}>
+          <MainBottomNavigator />
+        </ThemeProvider>
+        : null
+    );
+  }
 }
