@@ -17,16 +17,16 @@ const InnerContainer = styled.View`    height: 56px;
     padding: 0 8px;
 `;
 
-export default class TopBar extends React.Component {
-    render() {
-        let {color, iconColor} = this.props;
-
-        return (
-            <MainContainer color={color}>
-                <InnerContainer>
-                    <SearchBox iconColor={iconColor}/>
-                </InnerContainer>
-            </MainContainer>
-        )
-    }
+type Props = {
+  color: string
 }
+
+const TabBar = ({ color }: Props) => (
+  <MainContainer color={color}>
+    <InnerContainer>
+      <SearchBox />
+    </InnerContainer>
+  </MainContainer>
+);
+
+export default TabBar;

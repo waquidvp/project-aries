@@ -2,7 +2,6 @@
 
 import React from 'react';
 import styled from 'styled-components/native';
-import PropTypes from 'prop-types';
 
 import IconButton from './IconButton';
 
@@ -25,32 +24,22 @@ const SearchInput = styled.TextInput`
 `;
 
 export default class SearchBox extends React.Component {
-    render() {
-        let {iconColor} = this.props;
-
-        return (
-            <MainContainer>
-                <IconButton
-                    name='menu'
-                    size={40}
-                    iconSize={24}
-                    iconColor={iconColor}
-                />
-                <SearchInput
-                    placeholder='Search'
-                    underlineColorAndroid={'transparent'}
-                />
-                <IconButton
-                    name='more-vert'
-                    size={40}
-                    iconSize={24}
-                    iconColor={iconColor}
-                />
-            </MainContainer>
-        )
-    }
+  render() {
+    return (
+      <MainContainer>
+        <IconButton
+          name="menu"
+          size={40}
+        />
+        <SearchInput
+          placeholder="Search"
+          underlineColorAndroid={'transparent'}
+        />
+        <IconButton
+          name="more-vert"
+          size={40}
+        />
+      </MainContainer>
+    );
+  }
 }
-
-SearchBox.PropTypes = {
-    iconColor: PropTypes.string,
-};
