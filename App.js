@@ -6,6 +6,8 @@ import { ThemeProvider } from 'styled-components';
 import { getTheme, setTheme } from './src/utils/theme';
 import MainBottomNavigator from './src/navigators/MainBottomNavigator';
 
+console.disableYellowBox = true;
+
 export default class App extends React.Component {
   constructor() {
     super();
