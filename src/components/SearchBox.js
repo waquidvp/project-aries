@@ -28,7 +28,7 @@ export default class SearchBox extends React.Component {
     return (
       <MainContainer>
         <IconButton
-          name="menu"
+          name="search"
           size={40}
         />
         <SearchInput
