@@ -7,6 +7,12 @@ let darkTheme = {
   topBar: {
     background: '#212121'
   },
+  card: {
+    text: {
+      primary: 'rgba(0, 0, 0, 0.87)',
+      secondary: 'rgba(0, 0, 0, 0.54)'
+    }
+  },
   bottomNav: {
     background: '#212121',
     activeIcon: 'rgb(255, 255, 255)',
@@ -20,6 +26,12 @@ let lightTheme = {
   background: 'rgba(0, 0, 0, 0.15)',
   topBar: {
     background: '#F5F5F5'
+  },
+  card: {
+    text: {
+      primary: 'rgba(0, 0, 0, 0.87)',
+      secondary: 'rgba(0, 0, 0, 0.54)'
+    }
   },
   bottomNav: {
     background: '#F5F5F5',

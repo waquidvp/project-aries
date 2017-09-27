@@ -49,13 +49,13 @@ const UserDetailsInnerContainer = styled.View`
 const UserName = styled.Text`
     font-size: 14px;
     font-family: 'Roboto-Bold';
-    color: black;
+    color: ${props => props.theme.card.text.primary};
 `;
 
 const Caption = styled.Text`
     font-size: 14px;
-    font-family: 'Roboto-Bold';
-    color: black;
+    font-family: 'Roboto-Medium';
+    color: ${props => props.theme.card.text.primary};
 `;
 
 const TagsContainer = styled.View`
@@ -64,7 +64,7 @@ const TagsContainer = styled.View`
 
 const Tag = styled.Text`
     font-size: 14px;
-    color: #95989A;
+    color: ${props => props.theme.card.text.secondary};
     padding-right: 4px;
 `;
 
@@ -83,13 +83,13 @@ const PostStats = styled.View`
 const LikeCount = styled.Text`
     font-size: 12px;
     font-family: 'Roboto-Bold';
-    color: black;
+    color: ${props => props.theme.card.text.primary};
 `;
 
 const CommentCount = styled.Text`
     font-size: 12px;
     font-family: 'Roboto-Bold';
-    color: black;
+    color: ${props => props.theme.card.text.primary};
 `;
 
 const PostActions = styled.View`
@@ -123,7 +123,7 @@ class PostCard extends React.Component {
   }
 
   render() {
-    const { post } = this.props;
+    const { post, theme } = this.props;
 
     let LocationDetails = null;
     if (post.location){
@@ -160,21 +160,21 @@ class PostCard extends React.Component {
             <Action>
               <IconButton
                 name="send"
-                iconColor="black"
+                iconColor={theme.card.text.primary}
                 size={40}
               />
             </Action>
             <Action>
               <IconButton
                 name="mode-comment"
-                iconColor="black"
+                iconColor={theme.card.text.primary}
                 size={40}
               />
             </Action>
             <Action>
               <IconButton
                 name="repeat"
-                iconColor="black"
+                iconColor={theme.card.text.primary}
                 size={40}
               />
             </Action>
@@ -182,6 +182,7 @@ class PostCard extends React.Component {
               <LikeButton
                 liked={this.state.liked}
                 toggleLike={this.toggleLike}
+                theme={theme}
               />
             </Action>
           </PostActions>
@@ -202,7 +203,7 @@ const LikeButton = props => (
   <LikeButtonContainer onPress={() => props.toggleLike()}>
     {props.liked === true
       ? <Icon size={24} color="red" name="favorite" />
-      : <Icon size={24} color="black" name="favorite-border" />}
+      : <Icon size={24} color={props.theme.card.text.primary} name="favorite-border" />}
   </LikeButtonContainer>
 );
 
@@ -215,14 +216,14 @@ const TagCircle = styled.View`
     width: 7px;
     height: 7px;
     border-radius: 3.5px;
-    background-color: #95989A;
+    background-color: ${props => props.theme.card.text.secondary};
 `;
 
 const Location = styled.Text`
     font-family: 'Roboto-Regular';
     font-size: 13px;
     padding-left: 4px;
-    color: #95989A;
+    color: ${props => props.theme.card.text.secondary};
 `;
 
 const LocationTag = props => (
