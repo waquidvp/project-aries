@@ -24,9 +24,9 @@ class Account extends React.Component {
 
         return (
             <MainContainer>
-                <TopBar
+                {/* <TopBar
                     color={theme.topBar.background}
-                />
+                /> */}
                 <Text>This is the Account screen</Text>
             </MainContainer>
         )

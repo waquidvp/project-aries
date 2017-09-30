@@ -69,11 +69,6 @@ class Feed extends React.Component {
                     renderItem={({ item }) =>
                         <PostCard
                             post={item}
-                            /* onPress={() =>
-                                screenProps.stackNavigation.navigate(
-                                    'ViewPost',
-                                    { news: item }
-                                )} */
                         />}
                     ListHeaderComponent={Header}
                     ListFooterComponent={ListSeperator}

@@ -9,7 +9,7 @@ import Divider from './Divider';
 import IconButton from './IconButton';
 
 const MainContainer = styled.View`
-    background-color: white;
+    background-color: ${props => props.theme.card.background};
     elevation: 2;
     margin: 4px 8px 4px 8px;
     border-radius: 6px;
