@@ -16,7 +16,7 @@ export default class App extends React.Component {
   }
 
   componentWillMount() {
-    setTheme('dark', () => {
+    setTheme('light', () => {
       getTheme((theme) => {
         this.setState({ theme: theme });
       });
