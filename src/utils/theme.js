@@ -3,9 +3,9 @@
 import { AsyncStorage } from 'react-native';
 
 let darkTheme = {
-  background: '#2c3e50',
+  background: '#213142',
   topBar: {
-    background: '#253442'
+    background: '#18232f'
   },
   text: {
     primary: 'rgba(255, 255, 255, 1)',
@@ -13,7 +13,7 @@ let darkTheme = {
     disabled: 'rgba(255, 255, 255, 0.5)',
   },
   card: {
-    background: '#34495e',
+    background: '#26384c',
     text: {
       primary: 'rgba(255, 255, 255, 1)',
       secondary: 'rgba(255, 255, 255, 0.7)',
@@ -21,10 +21,14 @@ let darkTheme = {
     iconColor: 'rgba(255, 255, 255, 0.7)'
   },
   chatBubble: {
-    background: '#34495e'
+    background: '#26384c'
+  },
+  fab: {
+    background: '#3899C3',
+    fabIcon: '#FFFFFF',
   },
   bottomNav: {
-    background: '#253442',
+    background: '#18232f',
     activeIcon: 'rgb(255, 255, 255)',
     inactiveIcon: 'rgba(255, 255, 255, 0.7)',
     rippleColor: 'rgb(255, 255, 255)'
@@ -52,6 +56,10 @@ let lightTheme = {
   },
   chatBubble: {
     background: 'rgba(255, 255, 255, 0.3)'
+  },
+  fab: {
+    background: '#3899C3',
+    fabIcon: '#FFFFFF',
   },
   bottomNav: {
     background: '#F5F5F5',
