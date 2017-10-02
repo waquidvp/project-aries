@@ -13,13 +13,21 @@ export default class App extends React.Component {
     super();
 
     this.state = {};
+
+    this.updateTheme = this.updateTheme.bind(this);    
+  }
+
+  updateTheme(themeName) {
+    setTheme(themeName, () => {
+      let theme = getTheme(theme => {
+        this.setState({ theme: theme });
+      });
+    });
   }
 
   componentWillMount() {
-    setTheme('light', () => {
-      getTheme((theme) => {
-        this.setState({ theme: theme });
-      });
+    let theme = getTheme(theme => {
+      this.setState({ theme: theme });
     });
   }
 
@@ -27,7 +35,9 @@ export default class App extends React.Component {
     return (
       this.state.theme ?
         <ThemeProvider theme={this.state.theme}>
-          <MainBottomNavigator />
+          <MainBottomNavigator
+            props={{ updateTheme: this.updateTheme }}
+          />
         </ThemeProvider>
         : null
     );
