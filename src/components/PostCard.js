@@ -160,21 +160,21 @@ class PostCard extends React.Component {
             <Action>
               <IconButton
                 name="send"
-                iconColor={theme.card.text.primary}
+                iconColor={theme.card.iconColor}
                 size={40}
               />
             </Action>
             <Action>
               <IconButton
                 name="mode-comment"
-                iconColor={theme.card.text.primary}
+                iconColor={theme.card.iconColor}
                 size={40}
               />
             </Action>
             <Action>
               <IconButton
                 name="repeat"
-                iconColor={theme.card.text.primary}
+                iconColor={theme.card.iconColor}
                 size={40}
               />
             </Action>
@@ -203,7 +203,7 @@ const LikeButton = props => (
   <LikeButtonContainer onPress={() => props.toggleLike()}>
     {props.liked === true
       ? <Icon size={24} color="red" name="favorite" />
-      : <Icon size={24} color={props.theme.card.text.primary} name="favorite-border" />}
+      : <Icon size={24} color={props.theme.card.iconColor} name="favorite-border" />}
   </LikeButtonContainer>
 );
 
