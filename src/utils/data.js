@@ -165,75 +165,133 @@ export default {
     chats: [
         {
             key: 1,
-            profilePicURL: 'https://randomuser.me/api/portraits/men/47.jpg',
-            name: 'Jack Smith',
+            profilePicURL:
+                'https://68.media.tumblr.com/5a08a32e4d5575c5c5cd9a84f8f7d988/tumblr_otpfrwAjVh1rkrbrjo1_500.png',
+            name: 'jack_smith',
             lastMessage: {
                 text:
                     'Text me when you done with the new designs, I need them.',
-                time: '12:48 a.m'
+                time: '12:48 P.M'
             }
         },
+
         {
             key: 2,
-            profilePicURL: 'https://randomuser.me/api/portraits/men/84.jpg',
-            name: 'Brooks Pate',
+            profilePicURL:
+                'https://68.media.tumblr.com/39b95d7e9fc8d11452f7c4b408c1346c/tumblr_ohpvtfLNS11voiiauo1_500.jpg',
+            name: 'joshdaniels',
             lastMessage: {
-                text: 'Yo, how are you, long time no see where are you?',
-                time: '11:06 p.m'
+                text: 'Yo you wanna link up?',
+                time: '9.01 P.M'
             }
         },
         {
             key: 3,
-            profilePicURL: 'https://randomuser.me/api/portraits/men/85.jpg',
-            name: 'Clark Langdon',
+            profilePicURL:
+                'https://68.media.tumblr.com/05e102540d50ec73bfcae0ac4d1f63bb/tumblr_olcllzUHx91qc9n6mo1_1280.jpg',
+            name: 'College Group Chat',
             lastMessage: {
-                text: "Come Today, I am free at three o'clock",
-                time: '3:50 p.m'
+                text: 'Yo who has a free second?',
+                time: '7.45 P.M'
             }
         },
-        {
-            key: 4,
-            profilePicURL: 'https://randomuser.me/api/portraits/men/86.jpg',
-            name: 'Hank Guinn',
-            lastMessage: {
-                text: 'You coming or not, I am waiting on the other side!',
-                time: '11/04/17'
-            }
-        },
+
         {
             key: 5,
-            profilePicURL: 'https://randomuser.me/api/portraits/men/87.jpg',
-            name: 'Numbers Vaden',
+            profilePicURL:
+                'http://68.media.tumblr.com/41c2613784b87e66a0c8d88c1699be15/tumblr_ox6c82z42u1r5drd2o1_1280.jpg',
+            name: 'asvpxnvst',
             lastMessage: {
-                text: 'Hey',
+                text: 'when are you landing',
+                time: '11.08 A.M'
+            }
+        },
+
+        {
+            key: 6,
+            profilePicURL:
+                'https://68.media.tumblr.com/6cee59752cb130f4370da9f71608181f/tumblr_oup0yxZXT61w5h39go1_500.jpg',
+            name: 'richard_1',
+            lastMessage: {
+                text: 'Ight cool ill be there in 10',
                 time: 'Yesterday'
             }
         },
-        {
-            key: 6,
-            profilePicURL: 'https://randomuser.me/api/portraits/men/88.jpg',
-            name: 'Caleb Gilbride',
-            lastMessage: {
-                text: 'This messaging app is nice',
-                time: 'Tuesday'
-            }
-        },
+
         {
             key: 7,
-            profilePicURL: 'https://randomuser.me/api/portraits/men/89.jpg',
-            name: 'Jon Olsen',
+            profilePicURL:
+                'http://68.media.tumblr.com/044bbd9c586cbcb6df71bfae18b1bd53/tumblr_owhr1q7hjJ1tmpfl3o1_1280.jpg',
+            name: 'selena',
             lastMessage: {
-                text: 'When you coming to ski?',
-                time: 'Wednesday'
+                text: 'Shared a post',
+                time: 'Yesterday'
             }
         },
+
         {
             key: 8,
-            profilePicURL: 'https://randomuser.me/api/portraits/men/90.jpg',
-            name: 'Casey Niestat',
+            profilePicURL:
+                'https://68.media.tumblr.com/e14085aedd64b95b5192dfd335ba62e5/tumblr_ovj5p8EuPz1v9k99xo1_500.jpg',
+            name: 'scotty67',
             lastMessage: {
-                text: 'Why is my profile picture not me?',
-                time: 'a year ago'
+                text: 'You shared a post',
+                time: 'Yesterday'
+            }
+        },
+
+        {
+            key: 9,
+            profilePicURL:
+                'https://78.media.tumblr.com/f3452fd631d300c0655e2a134385f09c/tumblr_ojhjofX7Ky1w2hlpho1_540.png',
+            name: 'daniel_h',
+            lastMessage: {
+                text: 'You shared a post',
+                time: 'Yesterday'
+            }
+        },
+
+        {
+            key: 10,
+            profilePicURL:
+                'https://78.media.tumblr.com/7abf35cccad97630d701fe3989901717/tumblr_n9p3ztnoOp1qcmihko1_540.jpg',
+            name: 'interiordesign',
+            lastMessage: {
+                text: 'Shared a post',
+                time: 'Yesterday'
+            }
+        },
+
+        {
+            key: 11,
+            profilePicURL:
+                'https://78.media.tumblr.com/4d75c0b6879bf7c900219af3a15f8755/tumblr_oty907gDy71vlerg7o1_540.jpg',
+            name: "90'skids",
+            lastMessage: {
+                text: 'Shared a post',
+                time: 'Yesterday'
+            }
+        },
+
+        {
+            key: 12,
+            profilePicURL:
+                'https://78.media.tumblr.com/f12460c6fb2552889bd2fc15f51d2640/tumblr_o60tfaH4Lj1uijja9o1_500.jpg',
+            name: 'virgilabloh',
+            lastMessage: {
+                text: 'Its in cali',
+                time: 'Yesterday'
+            }
+        },
+
+        {
+            key: 13,
+            profilePicURL:
+                'https://78.media.tumblr.com/af77f5d805ec492ecabef667a3d64e51/tumblr_orai6m7P8P1twli78o1_500.jpg',
+            name: 'porscheuk',
+            lastMessage: {
+                text: 'Its your closest dealership',
+                time: 'Yesterday'
             }
         }
     ]
