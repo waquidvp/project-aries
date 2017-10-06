@@ -1,14 +1,10 @@
 import React from 'react';
-import { View, Image, ActivityIndicator, StatusBar } from 'react-native';
+import { View, Image, ActivityIndicator } from 'react-native';
 
 export default class SplashScreen extends React.Component {
     render(){
         return(
             <View style={{flex: 1, backgroundColor: '#3899C3', alignItems: 'center'}}>
-                <StatusBar 
-                    translucent
-                    backgroundColor='rgba(0,0,0,0.2)'
-                />
                 <Image 
                     source={require('../assets/img/logo.png')}
                     resizeMode='contain'
