@@ -95,9 +95,7 @@ class Chats extends React.Component {
 
         return(
             <MainContainer>
-                <TopBar
-                    color={theme.topBar.background}
-                />
+                <TopBar topSearches={false}/>
                 <FlatList
                     showsVerticalScrollIndicator={false}
                     onScroll={this.onScroll}

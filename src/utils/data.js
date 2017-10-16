@@ -294,5 +294,15 @@ export default {
                 time: 'Yesterday'
             }
         }
-    ]
+    ],
+    search:{
+        tags:[
+            'art',
+            'melissa fumero',
+            'brooklyn99',
+            'tesla',
+            'camila cabello',
+            'luis fonsi'
+        ]
+    }
 };

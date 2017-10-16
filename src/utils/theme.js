@@ -33,7 +33,8 @@ let darkTheme = {
     inactiveIcon: 'rgba(255, 255, 255, 0.7)',
     rippleColor: 'rgb(255, 255, 255)'
   },
-  divider: 'rgba(0, 0, 0, 0.12)'
+  divider: 'rgba(0, 0, 0, 0.12)',
+  searchTagColor: '#213142'
 };
 
 let lightTheme = {
@@ -67,7 +68,8 @@ let lightTheme = {
     inactiveIcon: 'rgba(0, 0, 0, 0.54)',
     rippleColor: 'rgb(0, 0, 0)'
   },
-  divider: 'rgba(0, 0, 0, 0.12)'  
+  divider: 'rgba(0, 0, 0, 0.12)',
+  searchTagColor: '#FFFFFF'  
 };
 
 function getTheme(callback) {

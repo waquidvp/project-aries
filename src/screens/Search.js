@@ -20,14 +20,13 @@ class Search extends React.Component {
     });
 
     render(){
-        let { theme } = this.props;
+        let { theme } = this.props;      
 
         return(
             <MainContainer>
                 <TopBar
-                    color={theme.topBar.background}
+                    topSearches={true}
                 />
-                <Text>This is the Search screen</Text>
             </MainContainer>
         )
     }
