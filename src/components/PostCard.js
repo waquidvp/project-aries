@@ -1,6 +1,7 @@
 // @flow
 
 import React from 'react';
+import { Dimensions } from 'react-native';
 import styled from 'styled-components/native';
 import { withTheme } from 'styled-components';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -8,24 +9,21 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import Divider from './Divider';
 import IconButton from './IconButton';
 
+const { height, width } = Dimensions.get('window');
+
 const MainContainer = styled.View`
     background-color: ${props => props.theme.card.background};
     elevation: 2;
-    margin: 4px 4px 4px 4px;
-    border-radius: 6px;
+    margin: 4px 0px 4px 0px;
 `;
 
 const PostHeader = styled.View``;
 
-const PostContent = styled.View`height: 350px;`;
+const PostContent = styled.View`height: ${props => props.height};`;
 
 const PostContentText = styled.View`padding: 24px 16px;`;
 
-const PostImage = styled.Image`
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    height: 350px;
-`;
+const PostImage = styled.Image`height: ${props => props.height};`;
 
 const PostText = styled.Text`
     font-size: ${props => (props.big ? 16 : 14)};
@@ -77,7 +75,7 @@ const PostFooter = styled.View`
 
 const PostStats = styled.View`
     flex-direction: column;
-    margin-left: 12px;
+    margin-left: 16px;
 `;
 
 const LikeCount = styled.Text`
@@ -94,7 +92,7 @@ const CommentCount = styled.Text`
 
 const PostActions = styled.View`
     flex-direction: row;
-    margin-right: 12px;
+    margin-right: 16px;
     align-items: flex-end;
     justify-content: flex-end;
 `;
@@ -130,42 +128,33 @@ class PostCard extends React.Component {
             LocationDetails = <LocationTag location={post.location} />;
         }
 
-        let GetPostHeader = () => {
+        let GetPostContent = () => {
             if (post.imgURL) {
                 return (
-                    <PostHeader>
-                        <PostContent>
-                            <PostImage source={{ uri: post.imgURL }} />
-                        </PostContent>
-                        <PostDetail
-                            post={post}
-                            LocationDetails={LocationDetails}
-                        />
-                    </PostHeader>
+                    <PostContent height={width}>
+                        <PostImage height={width} source={{ uri: post.imgURL }} />
+                    </PostContent>
                 );
             } else if (post.text) {
                 return (
-                    <PostHeader>
-                        <PostDetail
-                            post={post}
-                            LocationDetails={LocationDetails}
-                        />
-                        <Divider />
-                        <PostContentText>
-                            {post.text.length < 60 ? (
-                                <PostText big>{post.text}</PostText>
-                            ) : (
-                                <PostText>{post.text}</PostText>
-                            )}
-                        </PostContentText>
-                    </PostHeader>
+                    <PostContentText>
+                        {post.text.length < 60 ? (
+                            <PostText big>{post.text}</PostText>
+                        ) : (
+                            <PostText>{post.text}</PostText>
+                        )}
+                    </PostContentText>
                 );
             }
         };
 
         return (
             <MainContainer>
-                {GetPostHeader()}
+                <PostHeader>
+                    {GetPostContent()}
+                    <Divider />
+                    <PostDetail post={post} LocationDetails={LocationDetails} />
+                </PostHeader>
                 <Divider />
                 <PostFooter>
                     <PostStats>
@@ -209,7 +198,7 @@ class PostCard extends React.Component {
     }
 }
 
-const PostDetailContainer = styled.View`padding: 12px 12px 12px 12px;`;
+const PostDetailContainer = styled.View`padding: 12px 16px 12px 16px;`;
 
 const PostDetail = ({ post, LocationDetails }) => (
     <PostDetailContainer>

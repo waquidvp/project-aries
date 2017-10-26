@@ -14,9 +14,8 @@ const TouchContainer = styled.TouchableNativeFeedback`
 
 const MainContainer = styled.View`
     background-color: ${props => props.theme.chatBubble.background};
-    margin: 2px 4px 2px 4px;
+    margin: 2px 0;
     padding: 0px 12px 0px 12px;
-    border-radius: 6px;
     height: 72px;
     align-items: center;
     flex-direction: row;

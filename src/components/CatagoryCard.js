@@ -9,28 +9,20 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import demoData from '../utils/data';
 
 const MainContainer = styled.View`
-    margin: 3px 0px;
+    margin: 4px 0px;
 `;
 
 const CardContainer = styled.View`
     background-color: ${props => props.theme.card.background};
-    margin: 0px 4px 0px 4px;
-    padding: 8px 16px;
-    height: 161px;
-    border-radius: 6px;
+    padding: 8px 0px 0px;
     elevation: 2;
 `;
 
 const CatagoryTitle = styled.Text`
+    padding-left: 16px;
     font-family: 'Roboto-Bold';
     font-size: 14px;
     color: ${props => props.theme.text.primary};
-`;
-
-const HorizontalListContainer = styled.View`
-    position: absolute;
-    bottom: 0;
-    elevation: 4;
 `;
 
 const ListSeperator = styled.View`
@@ -38,7 +30,7 @@ const ListSeperator = styled.View`
 `;
 
 const ListHeaderFooter = styled.View`
-    width: 9px;
+    width: 5px;
 `;
 
 class CatagoryCard extends React.Component {
@@ -51,8 +43,6 @@ class CatagoryCard extends React.Component {
             <MainContainer>
                 <CardContainer>
                     <CatagoryTitle>{catagory.title}</CatagoryTitle>
-                </CardContainer>
-                <HorizontalListContainer>
                     <FlatList
                         data={catagory.items}
                         horizontal={true}
@@ -62,7 +52,7 @@ class CatagoryCard extends React.Component {
                         ListFooterComponent={ListHeaderFooter}
                         ListSeperator={ListSeperator}
                     />
-                </HorizontalListContainer>
+                </CardContainer>
             </MainContainer>
         )
     }
