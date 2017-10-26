@@ -15,9 +15,11 @@ const MainContainer = styled.View`
     border-radius: 6px;
 `;
 
-const PostContent = styled.View`
-    height: 350px;
-`;
+const PostHeader = styled.View``;
+
+const PostContent = styled.View`height: 350px;`;
+
+const PostContentText = styled.View`padding: 24px 16px;`;
 
 const PostImage = styled.Image`
     border-top-left-radius: 6px;
@@ -25,14 +27,13 @@ const PostImage = styled.Image`
     height: 350px;
 `;
 
-const PostDetail = styled.View`
-    padding: 12px 12px 12px 12px;
+const PostText = styled.Text`
+    font-size: ${props => (props.big ? 16 : 14)};
+    font-family: 'Roboto-Medium';
+    color: ${props => props.theme.card.text.primary};
 `;
 
-const UserDetails = styled.View`
-    flex-direction: row;
-    margin-bottom: 6px;
-`
+const UserDetails = styled.View`flex-direction: row;`;
 
 const ProfilePicture = styled.Image`
     width: 44px;
@@ -53,14 +54,13 @@ const UserName = styled.Text`
 `;
 
 const Caption = styled.Text`
+    margin-top: 6px;
     font-size: 14px;
     font-family: 'Roboto-Medium';
     color: ${props => props.theme.card.text.primary};
 `;
 
-const TagsContainer = styled.View`
-    flex-direction: row;
-`;
+const TagsContainer = styled.View`flex-direction: row;`;
 
 const Tag = styled.Text`
     font-size: 14px;
@@ -102,95 +102,132 @@ const PostActions = styled.View`
 const Action = styled.View`padding-left: 8px;`;
 
 class PostCard extends React.Component {
-  constructor(props) {
-    super(props);
+    constructor(props) {
+        super(props);
 
-    this.state = {};
+        this.state = {};
 
-    this.toggleLike = this.toggleLike.bind(this);
-  }
-
-  componentWillMount() {
-    this.setState({ liked: this.props.post.liked });
-  }
-
-  toggleLike() {
-    const likeState = this.state.liked;
-
-    likeState === true
-      ? this.setState({ liked: false })
-      : this.setState({ liked: true });
-  }
-
-  render() {
-    const { post, theme } = this.props;
-
-    let LocationDetails = null;
-    if (post.location){
-      LocationDetails = <LocationTag location={post.location}/>
+        this.toggleLike = this.toggleLike.bind(this);
     }
 
-    return (
-      <MainContainer>
-        <PostContent>
-          <PostImage source={{ uri: post.imgURL }} />
-        </PostContent>
-        <PostDetail>
-          <UserDetails>
-            <ProfilePicture source={{ uri: post.proPicURL }}/>
-            <UserDetailsInnerContainer>
-              <UserName>{post.user}</UserName>
-              { LocationDetails }
-            </UserDetailsInnerContainer>  
-          </UserDetails>
-          <Caption>{`"${post.caption}"`}</Caption>
-          <TagsContainer>
-            {
-              post.tags.map(tag => <Tag>{`#${tag}`}</Tag>)
+    componentWillMount() {
+        this.setState({ liked: this.props.post.liked });
+    }
+
+    toggleLike() {
+        const likeState = this.state.liked;
+
+        likeState === true
+            ? this.setState({ liked: false })
+            : this.setState({ liked: true });
+    }
+
+    render() {
+        const { post, theme } = this.props;
+
+        let LocationDetails = null;
+        if (post.location) {
+            LocationDetails = <LocationTag location={post.location} />;
+        }
+
+        let GetPostHeader = () => {
+            if (post.imgURL) {
+                return (
+                    <PostHeader>
+                        <PostContent>
+                            <PostImage source={{ uri: post.imgURL }} />
+                        </PostContent>
+                        <PostDetail
+                            post={post}
+                            LocationDetails={LocationDetails}
+                        />
+                    </PostHeader>
+                );
+            } else if (post.text) {
+                return (
+                    <PostHeader>
+                        <PostDetail
+                            post={post}
+                            LocationDetails={LocationDetails}
+                        />
+                        <Divider />
+                        <PostContentText>
+                            {post.text.length < 60 ? (
+                                <PostText big>{post.text}</PostText>
+                            ) : (
+                                <PostText>{post.text}</PostText>
+                            )}
+                        </PostContentText>
+                    </PostHeader>
+                );
             }
-          </TagsContainer>
-        </PostDetail>
-        <Divider />
-        <PostFooter>
-          <PostStats>
-            <LikeCount>{`${post.likes} likes`}</LikeCount>
-            <CommentCount>{`${post.commentNum} comments`}</CommentCount>
-          </PostStats>
-          <PostActions>
-            <Action>
-              <IconButton
-                name="send"
-                iconColor={theme.card.iconColor}
-                size={40}
-              />
-            </Action>
-            <Action>
-              <IconButton
-                name="mode-comment"
-                iconColor={theme.card.iconColor}
-                size={40}
-              />
-            </Action>
-            <Action>
-              <IconButton
-                name="repeat"
-                iconColor={theme.card.iconColor}
-                size={40}
-              />
-            </Action>
-            <Action>
-              <LikeButton
-                liked={this.state.liked}
-                toggleLike={this.toggleLike}
-                theme={theme}
-              />
-            </Action>
-          </PostActions>
-        </PostFooter>
-      </MainContainer>
-    );
-  }
+        };
+
+        return (
+            <MainContainer>
+                {GetPostHeader()}
+                <Divider />
+                <PostFooter>
+                    <PostStats>
+                        <LikeCount>{`${post.likes} likes`}</LikeCount>
+                        <CommentCount
+                        >{`${post.commentNum} comments`}</CommentCount>
+                    </PostStats>
+                    <PostActions>
+                        <Action>
+                            <IconButton
+                                name="send"
+                                iconColor={theme.card.iconColor}
+                                size={40}
+                            />
+                        </Action>
+                        <Action>
+                            <IconButton
+                                name="mode-comment"
+                                iconColor={theme.card.iconColor}
+                                size={40}
+                            />
+                        </Action>
+                        <Action>
+                            <IconButton
+                                name="repeat"
+                                iconColor={theme.card.iconColor}
+                                size={40}
+                            />
+                        </Action>
+                        <Action>
+                            <LikeButton
+                                liked={this.state.liked}
+                                toggleLike={this.toggleLike}
+                                theme={theme}
+                            />
+                        </Action>
+                    </PostActions>
+                </PostFooter>
+            </MainContainer>
+        );
+    }
 }
+
+const PostDetailContainer = styled.View`padding: 12px 12px 12px 12px;`;
+
+const PostDetail = ({ post, LocationDetails }) => (
+    <PostDetailContainer>
+        <UserDetails>
+            <ProfilePicture source={{ uri: post.proPicURL }} />
+            <UserDetailsInnerContainer>
+                <UserName>{post.user}</UserName>
+                {LocationDetails}
+            </UserDetailsInnerContainer>
+        </UserDetails>
+        {post.caption ? <Caption>{`"${post.caption}"`}</Caption> : null}
+        {post.tags ? (
+            <TagsContainer>
+                {post.tags.map(tag => <Tag>{`#${tag}`}</Tag>)}
+            </TagsContainer>
+        ) : null}
+    </PostDetailContainer>
+);
 
 const LikeButtonContainer = styled.TouchableOpacity`
     width: 40px;
@@ -200,11 +237,17 @@ const LikeButtonContainer = styled.TouchableOpacity`
 `;
 
 const LikeButton = props => (
-  <LikeButtonContainer onPress={() => props.toggleLike()}>
-    {props.liked === true
-      ? <Icon size={24} color="red" name="favorite" />
-      : <Icon size={24} color={props.theme.card.iconColor} name="favorite-border" />}
-  </LikeButtonContainer>
+    <LikeButtonContainer onPress={() => props.toggleLike()}>
+        {props.liked === true ? (
+            <Icon size={24} color="red" name="favorite" />
+        ) : (
+            <Icon
+                size={24}
+                color={props.theme.card.iconColor}
+                name="favorite-border"
+            />
+        )}
+    </LikeButtonContainer>
 );
 
 const LocationTagContainer = styled.View`
@@ -227,10 +270,10 @@ const Location = styled.Text`
 `;
 
 const LocationTag = props => (
-  <LocationTagContainer>
-    <TagCircle />
-    <Location>{props.location}</Location>
-  </LocationTagContainer>
+    <LocationTagContainer>
+        <TagCircle />
+        <Location>{props.location}</Location>
+    </LocationTagContainer>
 );
 
 export default withTheme(PostCard);
