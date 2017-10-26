@@ -75,7 +75,7 @@ const PostFooter = styled.View`
 
 const PostStats = styled.View`
     flex-direction: column;
-    margin-left: 16px;
+    margin-left: 12px;
 `;
 
 const LikeCount = styled.Text`
@@ -92,7 +92,7 @@ const CommentCount = styled.Text`
 
 const PostActions = styled.View`
     flex-direction: row;
-    margin-right: 16px;
+    margin-right: 12px;
     align-items: flex-end;
     justify-content: flex-end;
 `;
@@ -198,7 +198,7 @@ class PostCard extends React.Component {
     }
 }
 
-const PostDetailContainer = styled.View`padding: 12px 16px 12px 16px;`;
+const PostDetailContainer = styled.View`padding: 12px 12px 12px 12px;`;
 
 const PostDetail = ({ post, LocationDetails }) => (
     <PostDetailContainer>
