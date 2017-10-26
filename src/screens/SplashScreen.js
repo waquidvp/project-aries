@@ -6,11 +6,11 @@ export default class SplashScreen extends React.Component {
         return(
             <View style={{flex: 1, backgroundColor: '#3899C3', alignItems: 'center'}}>
                 <Image 
-                    source={require('../assets/img/logo.png')}
+                    source={require('../assets/img/logo-full.png')}
                     resizeMode='contain'
-                    style={{flex: 2, width: '33%', height: 'auto', margin: 20}}
+                    style={{flex: 2, width: '45%', height: 'auto', marginTop: '25%'}}
                 />
-                <ActivityIndicator style={{flex: 2}} size='large' color='white'/>
+                <ActivityIndicator style={{flex: 3}} size='large' color='white'/>
             </View>
         );
     }
