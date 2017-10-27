@@ -67,8 +67,6 @@ class Account extends React.Component {
                 <Switch
                     value={this.state.switchValue}
                     onValueChange={value => this.toggleSwitch(value)}
-                    onTintColor='#4ab2e0'
-                    thumbTintColor='#3899C3'
                 />
             </MainContainer>
         );

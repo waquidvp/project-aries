@@ -228,7 +228,7 @@ const LikeButtonContainer = styled.TouchableOpacity`
 const LikeButton = props => (
     <LikeButtonContainer onPress={() => props.toggleLike()}>
         {props.liked === true ? (
-            <Icon size={24} color="red" name="favorite" />
+            <Icon size={24} color="#FF5252" name="favorite" />
         ) : (
             <Icon
                 size={24}

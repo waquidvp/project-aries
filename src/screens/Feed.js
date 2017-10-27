@@ -17,7 +17,7 @@ const MainContainer = styled.View`
 
 const ListSeperator = styled.View`height: 4px;`;
 
-const Header = styled.View`height: 24px;`;
+const Header = styled.View`height: 21px;`;
 
 const FABContainer = styled.View`
     position: absolute;
@@ -103,7 +103,6 @@ class Feed extends React.Component {
 
         return (
             <MainContainer>
-                {/* <TopBar color={theme.topBar.background} /> */}
                 <FlatList
                     showsVerticalScrollIndicator={false}
                     onScroll={this.onScroll}

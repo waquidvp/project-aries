@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
+import { StatusBar } from 'react-native';
 import styled from 'styled-components/native';
 
 import { getTheme, setTheme } from './src/utils/theme';
@@ -41,6 +42,7 @@ export default class App extends React.Component {
     render() {
         return (
             <MainContainer>
+                <StatusBar translucent={true} backgroundColor='rgba(0, 0, 0, 0.25)' animated={true}/>
                 {this.state.theme ? (
                     <ThemeProvider theme={this.state.theme}>
                         <MainBottomNavigator

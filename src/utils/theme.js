@@ -3,9 +3,9 @@
 import { AsyncStorage } from 'react-native';
 
 let darkTheme = {
-  background: '#213142',
+  background: '#37474F',
   topBar: {
-    background: '#18232f'
+    background: '#263238'
   },
   text: {
     primary: 'rgba(255, 255, 255, 1)',
@@ -13,7 +13,7 @@ let darkTheme = {
     disabled: 'rgba(255, 255, 255, 0.5)',
   },
   card: {
-    background: '#26384c',
+    background: '#405059',
     text: {
       primary: 'rgba(255, 255, 255, 1)',
       secondary: 'rgba(255, 255, 255, 0.7)',
@@ -21,20 +21,20 @@ let darkTheme = {
     iconColor: 'rgba(255, 255, 255, 0.7)'
   },
   chatBubble: {
-    background: '#26384c'
+    background: '#405059'
   },
   fab: {
-    background: '#3899C3',
+    background: '#249991',
     fabIcon: '#FFFFFF',
   },
   bottomNav: {
-    background: '#18232f',
+    background: '#263238',
     activeIcon: 'rgb(255, 255, 255)',
     inactiveIcon: 'rgba(255, 255, 255, 0.7)',
     rippleColor: 'rgb(255, 255, 255)'
   },
   divider: 'rgba(0, 0, 0, 0.12)',
-  searchTagColor: '#213142'
+  searchTagColor: '#37474F'
 };
 
 let lightTheme = {
@@ -59,12 +59,12 @@ let lightTheme = {
     background: 'rgba(255, 255, 255, 0.3)'
   },
   fab: {
-    background: '#3899C3',
+    background: '#249991',
     fabIcon: '#FFFFFF',
   },
   bottomNav: {
     background: '#F5F5F5',
-    activeIcon: '#3899C3',
+    activeIcon: '#249991',
     inactiveIcon: 'rgba(0, 0, 0, 0.54)',
     rippleColor: 'rgb(0, 0, 0)'
   },

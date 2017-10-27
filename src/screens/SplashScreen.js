@@ -4,7 +4,7 @@ import { View, Image, ActivityIndicator } from 'react-native';
 export default class SplashScreen extends React.Component {
     render(){
         return(
-            <View style={{flex: 1, backgroundColor: '#3899C3', alignItems: 'center'}}>
+            <View style={{flex: 1, backgroundColor: '#249991', alignItems: 'center'}}>
                 <Image 
                     source={require('../assets/img/logo-full.png')}
                     resizeMode='contain'
