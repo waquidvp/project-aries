@@ -18,7 +18,7 @@ const MainContainer = styled.View`
 `;
 
 const ListSeperator = styled.View`
-    height: 6px;
+    height: 2px;
 `;
 
 const FABContainer = styled.View`

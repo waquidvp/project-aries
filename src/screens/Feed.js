@@ -17,7 +17,7 @@ const MainContainer = styled.View`
 
 const ListSeperator = styled.View`height: 4px;`;
 
-const Header = styled.View`height: 21px;`;
+const Header = styled.View`height: 20px;`;
 
 const FABContainer = styled.View`
     position: absolute;

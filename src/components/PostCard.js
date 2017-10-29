@@ -23,11 +23,13 @@ const PostContent = styled.View`height: ${props => props.height};`;
 
 const PostContentText = styled.View`padding: 24px 16px;`;
 
-const PostImage = styled.Image`height: ${props => props.height};`;
+const PostImage = styled.Image`
+    height: ${props => props.height};
+`;
 
 const PostText = styled.Text`
-    font-size: ${props => (props.big ? 16 : 14)};
-    font-family: 'Roboto-Medium';
+    font-size: ${props => (props.big ? 18 : 16)};
+    font-family: 'Roboto-Bold';
     color: ${props => props.theme.card.text.primary};
 `;
 
