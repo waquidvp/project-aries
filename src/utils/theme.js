@@ -18,7 +18,8 @@ let darkTheme = {
       primary: 'rgba(255, 255, 255, 1)',
       secondary: 'rgba(255, 255, 255, 0.7)',
     },
-    iconColor: 'rgba(255, 255, 255, 0.7)'
+    iconColor: 'rgba(255, 255, 255, 0.7)',
+    searchBarElements: 'rgba(255, 255, 255, 1)'
   },
   chatBubble: {
     background: '#405059'
@@ -53,7 +54,8 @@ let lightTheme = {
       primary: 'rgba(0, 0, 0, 0.87)',
       secondary: 'rgba(0, 0, 0, 0.54)'
     },
-    iconColor: 'rgba(0, 0, 0, 0.87)'
+    iconColor: 'rgba(0, 0, 0, 0.87)',
+    searchBarElements: 'rgba(0, 0, 0, 0.54)'
   },
   chatBubble: {
     background: 'rgba(255, 255, 255, 0.3)'

@@ -2,13 +2,14 @@
 
 import React from 'react';
 import styled from 'styled-components/native';
+import { withTheme } from 'styled-components';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import IconButton from './IconButton';
 
 const MainContainer = styled.View`
     height: 42px;
-    background-color: #FFFFFF;
+    background-color: ${props => props.theme.card.background};
     border-radius: 6px;
     elevation: 2;
     padding: 0 8px;
@@ -26,28 +27,36 @@ const SearchInput = styled.TextInput`
     left: 64px;
     right: 64px;
     font-size: 16px;
+    color: ${props => props.theme.card.text.primary};
 `;
 
-export default class SearchBox extends React.Component {
+class SearchBox extends React.Component {
   render() {
+    let { theme } = this.props;
+
     return (
       <MainContainer>
         <LeftIconContainer>
           <Icon
             name="search"
             size={24}
-            color='#747474'
+            color={theme.card.searchBarElements}
           />
         </LeftIconContainer>
         <SearchInput
           placeholder="Search"
           underlineColorAndroid={'transparent'}
+          placeholderTextColor={theme.card.text.secondary}
+          returnKeyType='search'
         />
         <IconButton
           name="more-vert"
           size={40}
+          iconColor={theme.card.searchBarElements}
         />
       </MainContainer>
     );
   }
 }
+
+export default withTheme(SearchBox);
