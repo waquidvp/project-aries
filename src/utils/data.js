@@ -79,7 +79,7 @@ export default {
             proPicURL:
                 'https://randomuser.me/api/portraits/men/14.jpg',
 
-            user: "Jack Cummings",
+            user: "jack_johnson",
             likes: 100,
             commentNum: 45
         },
@@ -223,6 +223,21 @@ export default {
 
             tags: ['weeknd', 'mclaren', 'p1'],
             commentNum: 14,
+            liked: true,
+        },
+        {
+            key: 15,
+            imgURL:
+                'https://78.media.tumblr.com/f27b96cb79f129030fb769dbea77a6a7/tumblr_nx0jpewbLr1u52r61o1_400.gif',
+            proPicURL:
+                'https://is3-ssl.mzstatic.com/image/thumb/Purple111/v4/1e/23/df/1e23dfd4-a3bc-b688-14ff-49e2904a8e05/source/256x256bb.jpg',
+
+            user: "laflame",
+            likes: 910,
+            caption: 'TOKYO',
+
+            tags: ['supreme', 'travis', 'japan'],
+            commentNum: 200,
             liked: true,
         },
     ],           
