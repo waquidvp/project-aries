@@ -16,7 +16,7 @@ export default {
         {
             key: 2,
             imgURL:
-                'https://www.tesla.com/sites/default/files/images/homepage/mobile/homepage-hero-us-only--touch@750w.jpg?20170808',
+                'https://cdn.vox-cdn.com/thumbor/ve_mQ0HGZsIXKpUALRMV7w6iHAY=/0x0:660x538/1200x800/filters:focal(278x217:382x321):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/51289193/model_x_gull_wing.0.0.gif',
             proPicURL: 'https://randomuser.me/api/portraits/men/47.jpg',
             user: 'jacksmith',
             caption: 'The next generation of cars, Long Live Tesla!',
@@ -99,7 +99,7 @@ export default {
         {
             key: 7,
             imgURL:
-                'https://68.media.tumblr.com/930ae85ef1d1fefa1a371a88fadaca21/tumblr_ouoot6AJVZ1vlgj3ko1_1280.jpg',
+                'https://78.media.tumblr.com/87ed3378dab3020ad67fa01ccd6cd3d4/tumblr_ojhk6li2KY1w2hlpho1_500.gif',
 
             proPicURL:
                 'https://68.media.tumblr.com/f50ea7d0ea7112be5423389eac5e2416/tumblr_ouijbj8fOj1th1cwyo2_500.jpg',
