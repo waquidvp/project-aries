@@ -205,12 +205,27 @@ export default {
             proPicURL:
                 'https://randomuser.me/api/portraits/men/42.jpg',
 
-            user: "Jeff Rodgers",
+            user: "jeff_rodgers",
             likes: 2400,
             commentNum: 76,
             liked: true,
-        }
-    ],
+        },
+        {
+            key: 14,
+            imgURL:
+                'https://78.media.tumblr.com/d19cb2587089a4e7fff62122127377d9/tumblr_oe82rsLm7d1r9spw1o1_540.gif',
+            proPicURL:
+                'https://is3-ssl.mzstatic.com/image/thumb/Purple111/v4/1e/23/df/1e23dfd4-a3bc-b688-14ff-49e2904a8e05/source/256x256bb.jpg',
+
+            user: "jhon_daniels",
+            likes: 452,
+            caption: 'Star Boy',
+
+            tags: ['weeknd', 'mclaren', 'p1'],
+            commentNum: 14,
+            liked: true,
+        },
+    ],           
     chats: [
         {
             key: 1,
