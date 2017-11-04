@@ -9,8 +9,6 @@ import { getTheme, setTheme } from './src/utils/theme';
 import MainBottomNavigator from './src/navigators/MainBottomNavigator';
 import SplashScreen from './src/screens/SplashScreen';
 
-console.disableYellowBox = true;
-
 const MainContainer = styled.View`
   flex: 1;
   background: white;

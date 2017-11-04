@@ -97,7 +97,7 @@ export default {
             location: 'Washington D.C.',
         },
         {
-            key: 7,
+            key: 8,
             imgURL:
                 'https://78.media.tumblr.com/87ed3378dab3020ad67fa01ccd6cd3d4/tumblr_ojhk6li2KY1w2hlpho1_500.gif',
 
@@ -114,7 +114,7 @@ export default {
             liked: true
         },
         {
-            key: 8,
+            key: 9,
             imgURL:
                 'https://68.media.tumblr.com/9ed159d6a76b320d8916b12778d3d0ad/tumblr_okinstYGPe1tmpfl3o1_500.jpg',
 
@@ -131,7 +131,7 @@ export default {
             liked: true
         },
         {
-            key: 9,
+            key: 10,
             imgURL:
                 'https://68.media.tumblr.com/cb6d2185628432cce06c62d665b9b285/tumblr_oncgyhx4ix1w0icbao1_500.jpg',
 
@@ -148,7 +148,7 @@ export default {
             liked: true
         },
         {
-            key: 10,
+            key: 11,
             imgURL:
                 'https://68.media.tumblr.com/48c5ea6e18a660005d0e38156957cacf/tumblr_opc22eMjiA1ux3e6xo1_r1_500.png',
 
@@ -165,7 +165,7 @@ export default {
             liked: true
         },
         {
-            key: 11,
+            key: 12,
             imgURL:
                 'https://68.media.tumblr.com/07be93797499b3a780c15872c91a1eb1/tumblr_nvszqqEFYB1rzsx0qo1_500.jpg',
 
@@ -182,7 +182,7 @@ export default {
             liked: true
         },
         {
-            key: 12,
+            key: 13,
             imgURL:
                 'https://68.media.tumblr.com/a5584742e53086c4f68a6f0e11308041/tumblr_osfyluTOtG1vmcwpxo1_500.jpg',
 
@@ -199,7 +199,7 @@ export default {
             liked: true
         },
         {
-            key: 13,
+            key: 14,
             text:
                 'If we have overfitting from our hypothesis function, 😃 we can reduce the weight that some of the terms in our function carry by increasing their cost. 😎',
             proPicURL:
@@ -211,7 +211,7 @@ export default {
             liked: true,
         },
         {
-            key: 14,
+            key: 15,
             imgURL:
                 'https://78.media.tumblr.com/d19cb2587089a4e7fff62122127377d9/tumblr_oe82rsLm7d1r9spw1o1_540.gif',
             proPicURL:
@@ -226,7 +226,7 @@ export default {
             liked: true,
         },
         {
-            key: 15,
+            key: 16,
             imgURL:
                 'https://78.media.tumblr.com/f27b96cb79f129030fb769dbea77a6a7/tumblr_nx0jpewbLr1u52r61o1_400.gif',
             proPicURL:
